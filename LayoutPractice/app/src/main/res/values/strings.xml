@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LayoutPractice</string>
+    <string name="chips">薯条</string>
+    <string name="hamburger">汉堡</string>
+    <string name="friedsquid">炸鱿鱼</string>
+    <string name="chickwings">炸鸡翅</string>
+    <string name="pizza">披萨</string>
+    <string name="dish">主餐：</string>
+    <string name="deafultaddres">默认地址</string>
+    <string name="snack">小吃</string>
+    <string name="dsishtext">主餐</string>
+    <string name="snackMenu">小吃：</string>
+    <string name="addressinput">输入地址</string>
+</resources>

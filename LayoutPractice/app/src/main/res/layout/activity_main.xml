@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.latoris.layoutpractice.MainActivity">
+
+    <TextView
+        android:id="@+id/dish"
+        android:text="@string/dsishtext"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:layout_below="@id/dish"
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/pizza"
+            android:text="@string/pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="@string/hamburger"
+            android:id="@+id/hamburger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/snack"
+        android:textSize="20sp"
+        android:text="@string/snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <CheckBox
+        android:id="@+id/chips"
+        android:text="@string/chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/snack"
+        android:layout_alignStart="@+id/snack" />
+    <CheckBox
+        android:id="@+id/chickwings"
+        android:text="@string/chickwings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chips"
+        android:layout_alignStart="@+id/chips" />
+    <CheckBox
+        android:id="@+id/friedSquid"
+        android:text="@string/friedsquid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chickwings"
+        android:layout_alignStart="@+id/chickwings" />
+    <Button
+        android:id="@+id/address"
+        android:text="@string/deafultaddres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addressInput"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/addressInput"
+        android:text="@string/addressinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="148dp"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dish"
+        android:id="@+id/dishMenu"
+        android:layout_below="@+id/friedSquid"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/snackMenu"
+        android:id="@+id/snackMenu"
+        android:layout_below="@+id/dishMenu"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:textSize="20sp" />
+</RelativeLayout>
