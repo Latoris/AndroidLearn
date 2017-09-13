@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.latoris.calculator.MainActivity"
     android:layout_gravity="center"
@@ -19,7 +17,6 @@
         android:gravity="center_vertical|right"
         android:layout_columnWeight="1"
         android:layout_rowWeight="2"
-        android:text="00000000000"
         android:id="@+id/cal"
         android:layout_gravity="fill"
         android:layout_row="0"
@@ -32,7 +29,6 @@
     <TextView
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:text="0000000"
         android:id="@+id/answer"
         android:layout_column="0"
         android:layout_gravity="fill"
@@ -42,22 +38,6 @@
         android:gravity="right"
         android:textSize="20dp" />
 
-
-    <Button
-        android:layout_gravity="fill"
-        android:text="C"
-        android:id="@+id/clear"
-        android:layout_row="2"
-        android:layout_column="0"/>
-
-    <Button
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:id="@+id/del"
-        android:layout_row="2"
-        android:layout_column="1"
-        android:text="del" />
 
     <Button
         android:layout_columnWeight="1"
@@ -76,24 +56,6 @@
         android:id="@+id/chu"
         android:layout_row="2"
         android:layout_column="3"/>
-
-    <Button
-        android:layout_gravity="fill"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:text="7"
-        android:id="@+id/seven"
-        android:layout_row="3"
-        android:layout_column="0"/>
-
-    <Button
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:text="8"
-        android:id="@+id/eight"
-        android:layout_row="3"
-        android:layout_column="1"/>
 
     <Button
         android:layout_columnWeight="1"
@@ -129,7 +91,7 @@
         android:id="@+id/five"
         android:layout_row="4"
         android:layout_column="1"
-        android:text="4"/>
+        android:text="5"/>
 
     <Button
         android:layout_columnWeight="1"
@@ -184,16 +146,7 @@
         android:layout_gravity="fill"
         android:layout_row="5"
         android:layout_column="3"
-        android:layout_rowSpan="2" />
-
-    <Button
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_gravity="fill"
-        android:text="."
-        android:id="@+id/point"
-        android:layout_row="6"
-        android:layout_column="0"/>
+        android:layout_rowSpan="2"/>
 
     <Button
         android:layout_columnWeight="1"
@@ -210,5 +163,242 @@
         android:text="="
         android:id="@+id/equal"
         android:layout_row="6"
-        android:layout_column="2"/>/>
-</GridLayout>
+        android:layout_column="2"/>
+
+    <Button
+        android:layout_gravity="fill"
+        android:text="C"
+        android:id="@+id/clear"
+        android:layout_row="2"
+        android:layout_column="0"/>
+
+    <Button
+        android:layout_gravity="fill"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:text="7"
+        android:id="@+id/seven"
+        android:layout_row="3"
+        android:layout_column="0"/>
+
+    <Button
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        android:id="@+id/del"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:text="del"/>
+
+    <Button
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        android:text="."
+        android:id="@+id/point"
+        android:layout_row="6"
+        android:layout_column="0"/>
+
+    <Button
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_gravity="fill"
+        android:text="8"
+        android:id="@+id/eight"
+        android:layout_row="3"
+        android:layout_column="1"/>/>
+</GridLayout>-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.latoris.calculator.MainActivity">
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|right"
+        android:id="@+id/cal"
+        android:focusable="false"
+        android:textSize="35sp"
+        android:maxLines="1"
+        android:textColor="#04e7fc" />
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/answer"
+        android:theme="@style/AlertDialog.AppCompat"
+        android:gravity="right|center_vertical"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="c"
+                android:id="@+id/clear"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/Seven"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/four"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/one"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:id="@+id/point"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="del"
+                android:id="@+id/del"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:id="@+id/eight"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/five"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/two"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/zero"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:id="@+id/per"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:id="@+id/nine"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/six"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/three"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:id="@+id/equal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="/"
+                android:id="@+id/chu"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="*"
+                android:id="@+id/multipy"/>
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="-"
+                android:id="@+id/minus"/>
+
+            <Button
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="+"
+                android:id="@+id/plus"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

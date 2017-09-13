@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:contenxt = "com.example.latoris.words.MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:title="搜索"/>
+    <item
+        android:id="@+id/action_insert"
+        android:title="插入"/>
+</menu>

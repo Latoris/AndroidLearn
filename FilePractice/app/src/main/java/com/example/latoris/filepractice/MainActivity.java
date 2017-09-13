@@ -13,6 +13,8 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     FileOutputStream fileOutputStream = openFileOutput(MyFileName, MODE_PRIVATE);
                     out = new BufferedOutputStream(fileOutputStream);
-                    String content = "LL is very good";
+                    SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+                    String content = "2014011228 trj "+df.format(new Date());
                     try{
                         out.write(content.getBytes(StandardCharsets.UTF_8));
                         Toast.makeText(MainActivity.this, "写入数据成攻："+ content,
