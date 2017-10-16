@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/layout_welcome"
+	android:background="@drawable/pic_3">
+	
+    <TextView
+        android:id="@+id/word"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:paddingTop="40px"
+        android:textColor="#06FF99"
+        android:textSize="30px"
+		android:text="请输入要添加的生词" />
+    
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        
+        android:layout_margin="30px"
+        android:textColor="#0656F0"
+        android:textSize="30px"
+		android:text="" />
+    
+     <TextView
+        android:id="@+id/chinese"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:paddingTop="20px"
+        android:textColor="#06FF99"
+        android:textSize="30px"
+		android:text="请输入生词的意思" />
+     
+      <EditText
+        android:id="@+id/input2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        
+        android:layout_margin="30px"
+        android:textColor="#0656F0"
+        android:textSize="30px"
+		android:text="" />
+    
+	<Button
+		android:id="@+id/que" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="30px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="确定" />
+	
+	<Button
+		android:id="@+id/fan" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="返回" />
+</LinearLayout>

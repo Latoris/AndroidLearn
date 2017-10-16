@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item
-    android:title="@string/settings"
-    android:id="@+id/pop_setting"/>
-    <item
-        android:title="@string/otherSettings"
-        android:id="@+id/pop_otherSettings"/>
-</menu>

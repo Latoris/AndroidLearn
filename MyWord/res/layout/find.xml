@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/layout_find"
+	android:background="@drawable/pic_3">
+	
+    <TextView
+        android:id="@+id/tishi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:paddingTop="40px"
+        android:textColor="#06FF99"
+        android:textSize="30px"
+		android:text="请输入要查找的生词" />
+    
+    <EditText
+        android:id="@+id/find"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        
+        android:layout_margin="30px"
+        android:textColor="#0656F0"
+        android:textSize="30px"
+		android:text="" />
+  
+    
+	<Button
+		android:id="@+id/go" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="30px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="确定" />
+	
+	  
+     <TextView
+        android:id="@+id/chinese"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:paddingTop="20px"
+        android:textColor="#06FF99"
+        android:textSize="30px"
+		android:text="" />
+     
+     <Button
+		android:id="@+id/hui" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="返回" />
+	
+
+</LinearLayout>

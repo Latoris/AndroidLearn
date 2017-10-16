@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">自创背单词</string>
+    <string name="zhuce_name">自创背单词--登录页面</string>
+    <string name="welcome_name">自创背单词--登录成功</string>
+    <string name="xuexi_name">自创背单词--单词学习</string>
+</resources>

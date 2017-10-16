@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:contenxt = "com.example.latoris.words.MainActivity">
+    <item
+        android:id="@+id/action_show_meaning"
+        android:title="显示注释"/>
+    <item
+        android:id="@+id/action_insert"
+        android:title="插入"/>
+    <item
+        android:id="@+id/action_goto_search"
+        android:title="搜索"/>
+    <item
+        android:id="@+id/action_reloadDict"
+        android:title="重新载入词典"/>
+    <item
+        android:id="@+id/action_order_alpha"
+        android:title="按字母排序"/>
+</menu>

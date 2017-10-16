@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/layout_zhuce"
+	android:background="@drawable/pic_4">
+	
+    <TextView
+        android:id="@+id/zc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+         android:layout_gravity="center"
+        android:textColor="#06FF99"
+        android:paddingTop="150px"
+        android:textSize="30px"
+		android:text="请在下面的输入框内输入你的登录名" />
+    
+    <TextView
+        android:id="@+id/sfm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+         android:paddingTop="30px"
+        android:paddingBottom="60px"
+        android:textColor="#0656F0"
+        android:textSize="30px"
+		android:text="请输入:" />
+    
+    <EditText
+        android:id="@+id/shuru"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        
+        android:layout_margin="20px"
+        android:textColor="#0656F0"
+        android:textSize="30px"
+		android:text="" />
+    
+	<Button
+		android:id="@+id/mybut" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_margin="20px"
+		android:textColor="#0656F0"
+		android:text="进入" />
+	<Button
+		android:id="@+id/tui" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_margin="20px"
+		android:textColor="#0656F0"
+		android:text="退出软件" />
+</LinearLayout>

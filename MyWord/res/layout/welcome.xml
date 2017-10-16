@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/layout_welcome"
+	android:background="@drawable/pic_4">
+	
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+         android:paddingTop="40px"
+         android:paddingBottom="60px"
+         android:gravity="center"
+        android:textColor="#06FF99"
+        android:textSize="30px"
+		android:text="欢迎来到全球限量版背单词主页" />
+    
+    
+	<Button
+		android:id="@+id/mybut1" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		
+		 android:layout_marginBottom="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="单词学习" />
+	<Button
+		android:id="@+id/mybut2" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="查询生词" />
+
+	<Button
+		android:id="@+id/mybut3" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="添加生词" />
+	 
+	<Button
+		android:id="@+id/mybut4" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="查生词表" />
+	
+	<Button
+		android:id="@+id/mybut5" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		 android:paddingTop="20px"
+		 android:layout_margin="20px"
+		 android:textColor="#0656F0"
+		android:text="返回首页" />
+</LinearLayout>

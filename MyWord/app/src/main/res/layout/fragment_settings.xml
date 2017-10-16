@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.latoris.myword.Fragments.TranslateFragment">
+    <EditText
+        android:id="@+id/translate_from"
+        android:layout_weight="4"
+        android:hint="翻译文本"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Spinner
+            android:id="@+id/translate_from_lang"
+            android:entries="@array/languages"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/translate"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="TO"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/translate_to_lang"
+            android:entries="@array/languages"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="目标语言"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/translate_result"
+        android:layout_weight="4"
+        android:text="翻译结果 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/news"
+        android:layout_weight="1"
+        android:text="新闻 名言"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>

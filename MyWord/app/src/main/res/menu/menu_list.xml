@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:contenxt = "com.example.latoris.myword.MainActivity">
+    <item
+        android:id="@+id/action_refresh"
+        android:title="刷新"/>
+    <item
+        android:id="@+id/action_show_meaning"
+        android:title="显示注释"/>
+    <item
+        android:id="@+id/action_insert"
+        android:title="插入"/>
+    <item
+        android:id="@+id/action_order_alpha"
+        android:title="按字母排序"/>
+</menu>
