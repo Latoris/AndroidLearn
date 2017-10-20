@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             initVal();
         }
         else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            /*横屏初始布局*/
             initVal();
             logxy = (Button)findViewById(R.id.Logxy);
             sqrt = (Button)findViewById(R.id.sqrt);

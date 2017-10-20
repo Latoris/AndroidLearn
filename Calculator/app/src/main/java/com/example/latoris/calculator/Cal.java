@@ -37,9 +37,10 @@ public class Cal {
             System.out.println("现在处理的是"+String.valueOf(str.charAt(i)));
             if(Character.isDigit(str.charAt(i)) || str.charAt(i) == '.'){
                 num = num + str.charAt(i);
-              //  System.out.println("判断当前数为："+num);
+                System.out.println("判断当前数为："+num);
             }
             //是e直接添加
+
             else if(str.charAt(i)=='e'){
                 result.add(String.valueOf(Math.E));
             }
@@ -60,10 +61,10 @@ public class Cal {
                     numSymbol =true;
                 }
                 result.add(num);
-             //   System.out.println("添加数字" + String.valueOf(num));
+                System.out.println("添加数字" + String.valueOf(num));
                 num="";
                 result.add(String.valueOf(str.charAt(i)));
-               // System.out.println("添加字符"+ str.charAt(i));
+                System.out.println("添加字符"+ str.charAt(i));
             }
             //处理转化后的表达式把对应的三角函数放入
             else if(str.charAt(i) == 'c' ||str.charAt(i) == 's' ||str.charAt(i) == 't' ||str.charAt(i) == 'a'){
@@ -102,10 +103,11 @@ public class Cal {
                 }
                 i--;
                 result.add(Symbol);
-             //   System.out.println(Symbol);
+                System.out.println(Symbol);
             }
             //其他符号添加
             else{
+                System.out.println("qita");
                 if(i>=1) {
                     if (str.charAt(i)=='-'&&(str.charAt(i - 1) == '+' ||
                             str.charAt(i - 1) == '-' ||
@@ -114,15 +116,23 @@ public class Cal {
                             str.charAt(i - 1) == '(')) {
                         numSymbol = false;
                //         System.out.println("fu");
-                    } else {
-                        System.out.println("添加符号" + String.valueOf(str.charAt(i)));
+                    } else if (str.charAt(i)=='+'&&(str.charAt(i - 1) == '+' ||
+                            str.charAt(i - 1) == '-' ||
+                            str.charAt(i - 1) == '*' ||
+                            str.charAt(i - 1) == '/' )){
+                        System.out.println("添加符号" + String.valueOf(str.charAt(i+1)));
+                        result.add(String.valueOf(str.charAt(i+1)));
+                        i++;
+                    }
+                    else{
                         result.add(String.valueOf(str.charAt(i)));
+                        System.out.println("添加符号" + String.valueOf(str.charAt(i)));
                     }
                 }
                 else{
-                        result.add(String.valueOf(str.charAt(i)));
-                        System.out.println("添加符号" + String.valueOf(str.charAt(i)));
-                    }
+                    result.add(String.valueOf(str.charAt(i)));
+                    System.out.println("添加符号" + String.valueOf(str.charAt(i)));
+                }
             }
         }
         //添加最后一个数
@@ -175,10 +185,13 @@ public class Cal {
                 switch (inOrderList.get(i).charAt(0)) {
                     case '(':
                         stack.push(inOrderList.get(i));
+                        System.out.println("入栈："+inOrderList.get(i));
                         break;
                     case ')':
                         while (!stack.peek().equals("(")) {
-                            result.add(stack.pop());
+                            String a = stack.pop();
+                            result.add(a);
+                            System.out.println("出栈："+a);
                         }
                         stack.pop();
                         break;
@@ -186,16 +199,33 @@ public class Cal {
                         result.add("!");
                         break;
                     default:
-                        while (!stack.isEmpty() && compare(stack.peek(), inOrderList.get(i))){
-                            result.add(stack.pop());
+                        if(inOrderList.get(i).equals("cos")||
+                                inOrderList.get(i).equals("cosh")||
+                                inOrderList.get(i).equals("acos")||
+                                inOrderList.get(i).equals("sinh")||
+                                inOrderList.get(i).equals("tanh")||
+                                inOrderList.get(i).equals("sin")||
+                                inOrderList.get(i).equals("tan")||
+                                inOrderList.get(i).equals("atan")){
+                            result.add(inOrderList.get(i));
+                            System.out.println("添加："+inOrderList.get(i));
+                            break;
                         }
+                        while (!stack.isEmpty() && compare(stack.peek(), inOrderList.get(i))){
+                            String a = stack.pop();
+                            result.add(a);
+                            System.out.println("出栈："+a);
+                        }
+                        System.out.println("入栈："+inOrderList.get(i));
                         stack.push(inOrderList.get(i));
                         break;
                 }
             }
         }
         while(!stack.isEmpty()) {
-            result.add(stack.pop());
+            String a = stack.pop();
+            result.add(a);
+            System.out.println("出栈："+a);
 
         }
         System.out.println("\n后缀：");
